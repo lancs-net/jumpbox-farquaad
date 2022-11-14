@@ -3,7 +3,7 @@ version: "3.9"
 services:
   jumpbox:
     container_name: jumpbox
-    image: ghcr.io/lancs-net/jumpbox:latest
+    image: ghcr.io/lancs-net/jumpbox-farquaad:latest
     ports:
       - 57923:2222/tcp
     volumes:
