@@ -2,6 +2,12 @@
 
 SSH Jumpbox is a hardened dockerized OpenSSH server that can be used as a bastion SSH server. 
 
+# Future me read this!
+
+Add new users to the `keys/authorized_keys` file, and commit & push - the image will be rebuild automagically. 
+
+On Farquaad, if watchtower doesn't pull the new image automaically, you it yourself - the compose file is in `/root`
+
 ## Usage
 
 You can add users with associated keys via 2 methods, volume mounting or baking them directly into the docker image. Either way, an `authorized_keys.json` file is needed. The format of this file is like so:
