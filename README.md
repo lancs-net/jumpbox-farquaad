@@ -34,6 +34,7 @@ You can add users with associated keys via 2 methods, volume mounting or baking 
    ```bash
    docker run --rm -p 2222:2222 --name jumpbox \ 
     -v "$(pwd)/hostkeys":/etc/ssh/hostkeys.d \
+    -e ENDLESSH_PORT=0 \
     jumpbox:latest
    ```
 
@@ -44,6 +45,7 @@ You can add users with associated keys via 2 methods, volume mounting or baking 
    docker run --rm -p 2222:2222 --name jumpbox \
     -v "$(pwd)/hostkeys":/etc/ssh/hostkeys.d \
     -v "$(pwd)/keys":/etc/ssh/keys.d \
+    -e ENDLESSH_PORT=0 \
     ghcr.io/willfantom/jumpbox
    ```
 
